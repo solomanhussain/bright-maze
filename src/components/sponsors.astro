@@ -2,43 +2,53 @@
 // @ts-ignore
 import { Picture } from "astro:assets";
 
-
 const sponsors = [
   {
     title: "Aspen Pet",
-    source:"https://assets.abandonedanimalfoundation.com/sponsors/aspen-pet.jpg",
+    source:
+      "https://assets.abandonedanimalfoundation.com/sponsors/aspen-pet.jpg",
   },
   {
     title: "No-kill Shelter",
-    source:"https://assets.abandonedanimalfoundation.com/sponsors/pet-promise.jpg",
+    source:
+      "https://assets.abandonedanimalfoundation.com/sponsors/pet-promise.jpg",
   },
   {
     title: "Petmate",
-    source:"https://assets.abandonedanimalfoundation.com/sponsors/petmate.jpg",
-  
+    source: "https://assets.abandonedanimalfoundation.com/sponsors/petmate.jpg",
   },
   {
     title: "Vinylot of Florida",
-    source:"https://assets.abandonedanimalfoundation.com/sponsors/vinylot-of-florida.jpg",
+    source:
+      "https://assets.abandonedanimalfoundation.com/sponsors/vinylot-of-florida.jpg",
   },
 ];
 ---
 
-<div class="mt-24">
-  <h2 class="text-center text-3xl lg:text-4xl text-slate-500">Sponsors</h2>
-  <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
-{
-sponsors.map((item) => (
-    <Picture
-    src={item.source}
-    alt={item.title}
-    inferSize
-    loading="eager"
-    format="avif"
-  />
-))
-
-}
-
+<div class="bg-white py-20 sm:py-10">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:text-center">
+      <h2 class="text-base font-semibold leading-7 text-red-500">Sponsors</h2>
+      <p
+        class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        Supported by the following groups.
+      </p>
+    </div>
+    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+      <div
+        class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
+        {
+          sponsors.map((item) => (
+            <Picture
+              src={item.source}
+              alt={item.title}
+              inferSize
+              loading="eager"
+              format="avif"
+            />
+          ))
+        }
+      </div>
+    </div>
   </div>
 </div>
