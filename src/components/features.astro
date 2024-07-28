@@ -1,63 +1,51 @@
 ---
 // @ts-ignore
-import { Icon } from "astro-icon/components";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "Save & Rescue",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+    "Rescuing abandoned and stray animals from animal shelters who have not been adopted and are often moments away from being euthanized.",
     icon: "bx:bxs-briefcase",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "No-kill Shelter",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+      "Building a no-kill animal shelter where abandoned pets can be safely sheltered without the threat of euthanization until we find them permanent homes.",
     icon: "bx:bxs-window-alt",
   },
   {
-    title: "On-Demand Components",
+    title: "Affordable Care",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+      "Providing inexpensive spay and neuter services in order to drastically reduce the number of unwanted animals on the streets.",
     icon: "bx:bxs-data",
   },
   {
-    title: "Broad Integration",
+    title: "Educating",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+      "Educating the community on responsible pet guardianship to avoid animals abandoned at the pound.",
     icon: "bx:bxs-bot",
-  },
-  {
-    title: "SEO Enabled",
-    description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
-  },
-  {
-    title: "Community",
-    description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    About our charity
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+    Abandoned Animal Foundation is a 501(c)(3) non-profit and no-kill organization, strictly supported by donations. Our mission is to rescue abandoned neonatal animals from situations that are abusive, endangering and neglectful, and finding those animals PERMANENT homes. Our priority is to provide our community with affordable vaccinations, spay/neuter programs and inexpensive veterinary care through our local network of vets.
+  </p>
+  <p class="text-lg mt-4 text-slate-600 font-bold">
+    Abandoned Animal Foundation is dedicated to the following goals:
   </p>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-  {
-    features.map((item) => (
+<div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-16">
+{
+  features.map((item) => (
       <div class="flex gap-4 items-start">
         <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
         </div>
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>{" "}

@@ -1,11 +1,23 @@
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import mdx from "@astrojs/mdx";
-import sitemap from "@astrojs/sitemap";
-import icon from "astro-icon";
+import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
+import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
+import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astroship.web3templates.com",
-  integrations: [tailwind(), mdx(), sitemap(), icon()],
+  site: 'https://www.abandonedanimalfoundation.com',
+  integrations: [
+    tailwind(), 
+    mdx(), 
+    sitemap()
+  ],
+  output: 'server',
+  adapter: cloudflare(),
+  build: {
+    minify: true,
+  },
+  image: {
+    domains: ["pub-dd8ac30d37cd44f9b5bd11218c798764.r2.dev"],
+  }
 });

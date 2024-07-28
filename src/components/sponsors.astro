@@ -1,0 +1,44 @@
+---
+// @ts-ignore
+import { Picture } from "astro:assets";
+
+
+const sponsors = [
+  {
+    title: "Aspen Pet",
+    source:"https://assets.abandonedanimalfoundation.com/sponsors/aspen-pet.jpg",
+  },
+  {
+    title: "No-kill Shelter",
+    source:"https://assets.abandonedanimalfoundation.com/sponsors/pet-promise.jpg",
+  },
+  {
+    title: "Petmate",
+    source:"https://assets.abandonedanimalfoundation.com/sponsors/petmate.jpg",
+  
+  },
+  {
+    title: "Vinylot of Florida",
+    source:"https://assets.abandonedanimalfoundation.com/sponsors/vinylot-of-florida.jpg",
+  },
+];
+---
+
+<div class="mt-24">
+  <h2 class="text-center text-3xl lg:text-4xl text-slate-500">Sponsors</h2>
+  <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
+{
+sponsors.map((item) => (
+    <Picture
+    src={item.source}
+    alt={item.title}
+    inferSize
+    loading="eager"
+    format="avif"
+  />
+))
+
+}
+
+  </div>
+</div>
